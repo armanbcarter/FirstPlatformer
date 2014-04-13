@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.RightArrow)) {
 			transform.Translate (Vector2.right * 4f * Time.deltaTime);
+			transform.eulerAngles = new Vector3(0,0,-10);
 		}
 
 		if (Input.GetKey (KeyCode.LeftArrow)) {
 			transform.Translate (-Vector2.right * 4f * Time.deltaTime);
+			transform.eulerAngles = new Vector3(0,0,10);
 		}
 	}
 }
