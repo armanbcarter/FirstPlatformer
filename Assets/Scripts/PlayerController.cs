@@ -23,12 +23,22 @@ public class PlayerController : MonoBehaviour {
 	void Movement() {
 
 		if (Input.GetKey (KeyCode.RightArrow)) {
-			transform.Translate (Vector2.right * 4f * Time.deltaTime);
+			if(isGrounded) {
+				transform.Translate (Vector2.right * 4f * Time.deltaTime);
+			}
+			else {
+				transform.Translate (Vector2.right * 2f * Time.deltaTime);
+			}		
 		//	transform.eulerAngles = new Vector3(0,0,-10);
 		}
 
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-			transform.Translate (-Vector2.right * 4f * Time.deltaTime);
+			if(isGrounded) {
+				transform.Translate (-Vector2.right * 4f * Time.deltaTime);
+			}
+			else {
+				transform.Translate (-Vector2.right * 2f * Time.deltaTime);
+			}
 		//	transform.eulerAngles = new Vector3(0,0,10);
 		}
 	
