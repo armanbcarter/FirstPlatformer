@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 	
-	float jumpForce = 300f;			
+	float jumpForce = 350f;			
 	float maxSpeed = 5f;
 	bool facingRight = true;
 	public bool isGrounded = false;
